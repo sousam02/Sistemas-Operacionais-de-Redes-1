@@ -55,7 +55,7 @@ while True:
                     numConvertido = valor * 1.201
                 case 3:
                     numConvertido = valor / 2.825
-    
+    print(numConvertido)
     numConvertido = pickle.dumps(numConvertido)
 
     clientsocket.send(numConvertido)
