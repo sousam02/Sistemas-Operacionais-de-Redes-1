@@ -15,6 +15,8 @@ def escolhaGrandeza():
     print('4) Consumo de combustível\n')
 
     grandeza = int(input('Opção: '))
+    while grandeza < 1 or grandeza >4:
+        grandeza = int(input('ESCOLHA UMA GRANDEZA VÁLIDA: '))
             
     return grandeza
 
@@ -45,6 +47,8 @@ def escolhaConversao():
             print('3) Milhas por galão imperial - Quilômetro por litro\n')
                 
     conversao = int(input('Opção: '))
+    while conversao <1 or conversao >3:
+        conversao = int(input('INFORME UMA OPÇÃO VÁLIDA: '))
 
     valor = int(input('\nINFORME O VALOR A SER CONVERTIDO: '))
 
@@ -68,7 +72,7 @@ while repetirConversao == 's':
 
     numConvertido = s.recv(1024)
     numConvertido = pickle.loads(numConvertido)
-    print('O valor convertido é: %5.2f' % numConvertido)
+    print(numConvertido)
 
     repetirConversao = input('\nGostaria de fazer outra conversão? (s/n): ')
     s.close()
