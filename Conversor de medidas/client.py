@@ -10,7 +10,7 @@ while repetirConversao == 's':
     data = []
 
     def escolhaGrandeza():
-        print('\nBEM VINDO AO CONVERSOR DE MEDIDAS UNIVERSAL\n')
+        print('\nBEM VINDO AO CONVEROR DE MEDIDAS UNIVERSAL\n')
         print('ESCOLHA A GRANDEZA QUE DESEJA CONVERTER:')
 
         print('1) Temperatura')
