@@ -16,7 +16,11 @@ def menu():
     weight = float(input('INFORM YOUR WEIGHT (KG): '))
     height = float(input('INFORM YOUR HEIGHT (CM): ')) / 100
     abdominal_circ = float(input('INFORM YOUR ABDOMINAL CIRCUMFERENCE (CM): '))
-    sex = input('INFORM YOUR SEX (M or F): ')
+    
+    sex = input('INFORM YOUR SEX (M or F): ').capitalize()
+    while sex != 'M' and sex != 'F':
+        sex = input('INFORM A VALID SEX (M or F): ').capitalize()
+    
 
     measures = []
     measures.append(weight)
@@ -36,7 +40,15 @@ client.send(pickle.dumps(measures))
 
 classifications = client.recv(SIZE)
 classifications = pickle.loads(classifications)
-print(f'[SERVER] {classifications}')
+
+print('+------------------------------------------+-------------------------------------+------------------------------+')
+print("|{:^42}|{:^37}|{:^30}|".format('INFORMATION', 'CALCULATION', 'CLASSIFICATION'))
+
+for i in range(len(classifications)):
+    print('+------------------------------------------+-------------------------------------+------------------------------+')
+    print("|{information:<42}|{calculation:37}|{classification:30}|".format(**classifications[i]))
+print('+------------------------------------------+-------------------------------------+------------------------------+')
+
 
 client.close()
 
