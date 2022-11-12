@@ -1,0 +1,22 @@
+*{
+    margin: 0px; 
+    padding: 0px;  
+}
+
+html {
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+#cabecalho{
+
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 60px;
+    
+    
+}
+
+.orange{
+    background: orange
+}
